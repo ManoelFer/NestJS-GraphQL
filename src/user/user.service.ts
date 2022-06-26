@@ -14,6 +14,12 @@ export class UserService {
         private userRepository: Repository<User>
     ) { }
 
+    //método para listagem de usuários
+    async findAllUsers(): Promise<User[]> {
+        const users = await this.userRepository.find()
+        return users
+    }
+
     //método para criar um usuário
     async createUser(data: CreateUserInput): Promise<User> {
         const user = await this.userRepository.create(data);
