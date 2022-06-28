@@ -9,6 +9,10 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
 import { UserModule } from './user/user.module';
 
+/*
+  Arquivo para importação dos módulos utilizados no projeto e conexão com o banco de dados!
+  Sejam bem-vindos ao coração da nossa API!
+*/
 @Module({
   imports: [
     TypeOrmModule.forRoot({
